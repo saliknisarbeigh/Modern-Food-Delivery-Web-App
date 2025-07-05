@@ -24,4 +24,7 @@ jest.config.js
 .vscode/
 .idea/
 *.sublime-workspace
-*.sublime-project 
+*.sublime-project
+
+# parcel cache
+.parcel-cache/ 
