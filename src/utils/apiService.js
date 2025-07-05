@@ -1,9 +1,8 @@
 // API Service with error handling and retry logic
 class ApiService {
   constructor() {
-    // Use a reliable public CORS proxy to bypass CORS issues
-    this.baseURL =
-      "https://api.allorigins.win/raw?url=https://www.swiggy.com/dapi";
+    // Direct API calls to Swiggy
+    this.baseURL = "https://www.swiggy.com/dapi";
     this.maxRetries = 3;
     this.retryDelay = 1000;
   }
