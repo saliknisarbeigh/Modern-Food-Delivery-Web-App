@@ -6,7 +6,7 @@ const About = () => {
       id: 1,
       name: "Salik Nisar Beigh",
       role: "Lead Developer & UI/UX Designer",
-      age: 18,
+      age: 19,
       avatar:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
       skills: ["React", "Node.js", "UI/UX", "Redux"],
@@ -17,7 +17,7 @@ const About = () => {
       id: 2,
       name: "Salik Nisar Beigh",
       role: "Project Manager & Backend Developer",
-      age: 18,
+      age: 19,
       avatar:
         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
       skills: [
@@ -32,7 +32,7 @@ const About = () => {
       id: 3,
       name: "Salik Nisar Beigh",
       role: "Frontend Engineer",
-      age: 18,
+      age: 19,
       avatar:
         "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
       skills: ["JavaScript", "React", "TypeScript", "CSS"],
@@ -43,7 +43,7 @@ const About = () => {
       id: 4,
       name: "Salik Nisar Beigh",
       role: "Data Analyst & DevOps Engineer",
-      age: 18,
+      age: 19,
       avatar:
         "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
       skills: ["Data Analysis", "AWS", "Docker", "CI/CD"],
@@ -367,7 +367,7 @@ const About = () => {
           </div>
           <div className="border-t border-gray-800 pt-8">
             <p className="text-gray-400">
-              © 2024 Swiggy Clone. All Rights Reserved. | Made with ❤️ by Salik
+              © 2025 Swiggy Clone. All Rights Reserved. | Made with ❤️ by Salik
               Nisar Beigh
             </p>
           </div>
