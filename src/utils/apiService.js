@@ -1,8 +1,9 @@
 // API Service with error handling and retry logic
 class ApiService {
   constructor() {
-    // Use the Vercel serverless function proxy to bypass CORS
-    this.baseURL = "/api/proxy";
+    // Use a reliable public CORS proxy to bypass CORS issues
+    this.baseURL =
+      "https://api.allorigins.win/raw?url=https://www.swiggy.com/dapi";
     this.maxRetries = 3;
     this.retryDelay = 1000;
   }
