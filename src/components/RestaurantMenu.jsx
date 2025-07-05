@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { fetchRestaurantMenu, clearMenu } from "../store/restaurantSlice";
 import { addItem } from "../store/cartSlice";
 import Shimmer from "./shimmer";
@@ -10,6 +10,7 @@ import Modal from "./Modal";
 
 const RestaurantMenu = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { resId } = useParams();
   const { menu, menuLoading, menuError } = useSelector(
     (state) => state.restaurants
@@ -357,7 +358,7 @@ const RestaurantMenu = () => {
                     </div>
 
                     <button
-                      onClick={() => (window.location.href = "/cart")}
+                      onClick={() => navigate("/cart")}
                       className="w-full bg-orange-600 text-white py-3 rounded-lg font-medium hover:bg-orange-700 transition-colors duration-200 shadow-md"
                     >
                       View Cart (

@@ -1,10 +1,12 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { removeItem, updateQuantity, clearCart } from "../store/cartSlice";
 import { CDN_URL } from "../utils/constants";
 
 const Cart = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { items, totalItems, totalAmount, restaurantName } = useSelector(
     (state) => state.cart
   );
@@ -56,7 +58,7 @@ const Cart = () => {
             Looks like you haven't added any items to your cart yet.
           </p>
           <button
-            onClick={() => (window.location.href = "/")}
+            onClick={() => navigate("/")}
             className="bg-orange-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-700 transition-colors duration-200 shadow-md"
           >
             Start Shopping
@@ -275,7 +277,7 @@ const Cart = () => {
               </button>
 
               <button
-                onClick={() => (window.location.href = "/")}
+                onClick={() => navigate("/")}
                 className="w-full bg-gray-200 text-gray-800 py-3 rounded-lg font-medium hover:bg-gray-300 transition-colors duration-200"
               >
                 Continue Shopping
