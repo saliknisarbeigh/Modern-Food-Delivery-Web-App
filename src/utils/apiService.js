@@ -1,7 +1,8 @@
 // API Service with error handling and retry logic
 class ApiService {
   constructor() {
-    this.baseURL = "https://www.swiggy.com/dapi";
+    // Use the Vercel serverless function proxy to bypass CORS
+    this.baseURL = "/api/proxy";
     this.maxRetries = 3;
     this.retryDelay = 1000;
   }
