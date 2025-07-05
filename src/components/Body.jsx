@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchRestaurants, filterRestaurants } from "../store/restaurantSlice";
 import RestaurantCard from "./RestaurantCard";
-import Shimmer from "./Shimmer";
+import Shimmer from "./shimmer";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import ErrorDisplay from "./ErrorDisplay";
 import CategoryCarousel from "./CategoryCarousel";

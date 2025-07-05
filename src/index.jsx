@@ -10,7 +10,7 @@ import Header from "./components/Header";
 // import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
-import Shimmer from "./components/Shimmer";
+import Shimmer from "./components/shimmer";
 import Cart from "./components/Card";
 import ErrorBoundary from "./components/ErrorBoundary";
 // import Grocery from "./components/Grocery";

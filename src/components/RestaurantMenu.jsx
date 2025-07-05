@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchRestaurantMenu, clearMenu } from "../store/restaurantSlice";
 import { addItem } from "../store/cartSlice";
-import Shimmer from "./Shimmer";
+import Shimmer from "./shimmer";
 import ErrorDisplay from "./ErrorDisplay";
 import { CDN_URL } from "../utils/constants";
 import Modal from "./Modal";
