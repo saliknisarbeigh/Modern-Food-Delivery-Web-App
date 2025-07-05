@@ -28,3 +28,4 @@ jest.config.js
 
 # parcel cache
 .parcel-cache/ 
+.vercel
