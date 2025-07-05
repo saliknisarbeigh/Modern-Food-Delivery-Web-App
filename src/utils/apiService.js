@@ -68,6 +68,12 @@ class ApiService {
   }
 
   async getRestaurantMenu(resId, lat = 21.9974, lng = 79.0011) {
+    // Check if this is a mock restaurant ID
+    if (resId && resId.startsWith("mock-")) {
+      console.log("Using fallback menu for mock restaurant:", resId);
+      return this.getFallbackMenu();
+    }
+
     try {
       const url = `${this.baseURL}/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=${lat}&lng=${lng}&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`;
       const data = await this.request(url);
@@ -87,7 +93,7 @@ class ApiService {
     return [
       {
         info: {
-          id: "1",
+          id: "mock-pizza-palace-001",
           name: "Pizza Palace",
           cloudinaryImageId: "b2edbc28b7b8219d6e0a",
           locality: "Downtown",
@@ -100,7 +106,7 @@ class ApiService {
       },
       {
         info: {
-          id: "2",
+          id: "mock-burger-house-002",
           name: "Burger House",
           cloudinaryImageId: "b2edbc28b7b8219d6e0a",
           locality: "Mall Road",
@@ -113,7 +119,7 @@ class ApiService {
       },
       {
         info: {
-          id: "3",
+          id: "mock-sushi-express-003",
           name: "Sushi Express",
           cloudinaryImageId: "b2edbc28b7b8219d6e0a",
           locality: "Riverside",
@@ -126,7 +132,7 @@ class ApiService {
       },
       {
         info: {
-          id: "4",
+          id: "mock-tandoori-nights-004",
           name: "Tandoori Nights",
           cloudinaryImageId: "b2edbc28b7b8219d6e0a",
           locality: "Old City",
@@ -139,7 +145,7 @@ class ApiService {
       },
       {
         info: {
-          id: "5",
+          id: "mock-chinese-wok-005",
           name: "Chinese Wok",
           cloudinaryImageId: "b2edbc28b7b8219d6e0a",
           locality: "Chinatown",
@@ -152,7 +158,7 @@ class ApiService {
       },
       {
         info: {
-          id: "6",
+          id: "mock-cafe-milano-006",
           name: "Cafe Milano",
           cloudinaryImageId: "b2edbc28b7b8219d6e0a",
           locality: "Arts District",
@@ -165,7 +171,7 @@ class ApiService {
       },
       {
         info: {
-          id: "7",
+          id: "mock-spice-garden-007",
           name: "Spice Garden",
           cloudinaryImageId: "b2edbc28b7b8219d6e0a",
           locality: "Spice Market",
@@ -178,7 +184,7 @@ class ApiService {
       },
       {
         info: {
-          id: "8",
+          id: "mock-fresh-bites-008",
           name: "Fresh Bites",
           cloudinaryImageId: "b2edbc28b7b8219d6e0a",
           locality: "Health District",
@@ -191,7 +197,7 @@ class ApiService {
       },
       {
         info: {
-          id: "9",
+          id: "mock-dessert-paradise-009",
           name: "Dessert Paradise",
           cloudinaryImageId: "b2edbc28b7b8219d6e0a",
           locality: "Sweet Street",
@@ -204,7 +210,7 @@ class ApiService {
       },
       {
         info: {
-          id: "10",
+          id: "mock-seafood-delight-010",
           name: "Seafood Delight",
           cloudinaryImageId: "b2edbc28b7b8219d6e0a",
           locality: "Harbor View",
@@ -217,7 +223,7 @@ class ApiService {
       },
       {
         info: {
-          id: "11",
+          id: "mock-street-food-hub-011",
           name: "Street Food Hub",
           cloudinaryImageId: "b2edbc28b7b8219d6e0a",
           locality: "Food Street",
@@ -230,7 +236,7 @@ class ApiService {
       },
       {
         info: {
-          id: "12",
+          id: "mock-royal-biryani-012",
           name: "Royal Biryani",
           cloudinaryImageId: "b2edbc28b7b8219d6e0a",
           locality: "Royal Plaza",
@@ -243,7 +249,7 @@ class ApiService {
       },
       {
         info: {
-          id: "13",
+          id: "mock-quick-bites-013",
           name: "Quick Bites",
           cloudinaryImageId: "b2edbc28b7b8219d6e0a",
           locality: "Business Park",
@@ -256,7 +262,7 @@ class ApiService {
       },
       {
         info: {
-          id: "14",
+          id: "mock-veggie-delight-014",
           name: "Veggie Delight",
           cloudinaryImageId: "b2edbc28b7b8219d6e0a",
           locality: "Green Valley",
@@ -269,7 +275,7 @@ class ApiService {
       },
       {
         info: {
-          id: "15",
+          id: "mock-bbq-house-015",
           name: "BBQ House",
           cloudinaryImageId: "b2edbc28b7b8219d6e0a",
           locality: "BBQ Street",
@@ -282,7 +288,7 @@ class ApiService {
       },
       {
         info: {
-          id: "16",
+          id: "mock-noodle-bar-016",
           name: "Noodle Bar",
           cloudinaryImageId: "b2edbc28b7b8219d6e0a",
           locality: "Asian Quarter",
@@ -295,7 +301,7 @@ class ApiService {
       },
       {
         info: {
-          id: "17",
+          id: "mock-sweet-treats-017",
           name: "Sweet Treats",
           cloudinaryImageId: "b2edbc28b7b8219d6e0a",
           locality: "Candy Lane",
@@ -308,7 +314,7 @@ class ApiService {
       },
       {
         info: {
-          id: "18",
+          id: "mock-fusion-kitchen-018",
           name: "Fusion Kitchen",
           cloudinaryImageId: "b2edbc28b7b8219d6e0a",
           locality: "Fusion Plaza",
@@ -321,7 +327,7 @@ class ApiService {
       },
       {
         info: {
-          id: "19",
+          id: "mock-breakfast-club-019",
           name: "Breakfast Club",
           cloudinaryImageId: "b2edbc28b7b8219d6e0a",
           locality: "Morning Street",
@@ -334,7 +340,7 @@ class ApiService {
       },
       {
         info: {
-          id: "20",
+          id: "mock-late-night-bites-020",
           name: "Late Night Bites",
           cloudinaryImageId: "b2edbc28b7b8219d6e0a",
           locality: "Night Market",
@@ -355,13 +361,13 @@ class ApiService {
           card: {
             card: {
               info: {
-                name: "Sample Restaurant",
-                cuisines: ["Indian", "Chinese"],
+                name: "Mock Restaurant",
+                cuisines: ["Indian", "Chinese", "Italian"],
                 costForTwoMessage: "₹400 for two",
-                city: "Sample City",
+                city: "Mock City",
                 avgRating: 4.2,
                 totalRatingsString: "1K+",
-                areaName: "Sample Area",
+                areaName: "Mock Area",
               },
             },
           },
@@ -371,13 +377,13 @@ class ApiService {
           card: {
             card: {
               info: {
-                name: "Sample Restaurant",
-                cuisines: ["Indian", "Chinese"],
+                name: "Mock Restaurant",
+                cuisines: ["Indian", "Chinese", "Italian"],
                 costForTwoMessage: "₹400 for two",
-                city: "Sample City",
+                city: "Mock City",
                 avgRating: 4.2,
                 totalRatingsString: "1K+",
-                areaName: "Sample Area",
+                areaName: "Mock Area",
               },
             },
           },
@@ -397,10 +403,11 @@ class ApiService {
                           {
                             card: {
                               info: {
-                                id: "1",
+                                id: "mock-item-001",
                                 name: "Butter Chicken",
                                 price: 25000,
-                                description: "Creamy and rich butter chicken",
+                                description:
+                                  "Creamy and rich butter chicken with aromatic spices",
                                 imageId: "b2edbc28b7b8219d6e0a",
                               },
                             },
@@ -408,11 +415,47 @@ class ApiService {
                           {
                             card: {
                               info: {
-                                id: "2",
+                                id: "mock-item-002",
                                 name: "Chicken Biryani",
                                 price: 30000,
                                 description:
-                                  "Aromatic biryani with tender chicken",
+                                  "Aromatic biryani with tender chicken and fragrant rice",
+                                imageId: "b2edbc28b7b8219d6e0a",
+                              },
+                            },
+                          },
+                          {
+                            card: {
+                              info: {
+                                id: "mock-item-003",
+                                name: "Margherita Pizza",
+                                price: 20000,
+                                description:
+                                  "Classic pizza with tomato sauce, mozzarella, and basil",
+                                imageId: "b2edbc28b7b8219d6e0a",
+                              },
+                            },
+                          },
+                          {
+                            card: {
+                              info: {
+                                id: "mock-item-004",
+                                name: "Pasta Carbonara",
+                                price: 18000,
+                                description:
+                                  "Creamy pasta with bacon, eggs, and parmesan cheese",
+                                imageId: "b2edbc28b7b8219d6e0a",
+                              },
+                            },
+                          },
+                          {
+                            card: {
+                              info: {
+                                id: "mock-item-005",
+                                name: "Chocolate Brownie",
+                                price: 8000,
+                                description:
+                                  "Warm chocolate brownie with vanilla ice cream",
                                 imageId: "b2edbc28b7b8219d6e0a",
                               },
                             },
